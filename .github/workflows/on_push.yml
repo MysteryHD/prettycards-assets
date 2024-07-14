@@ -1,0 +1,9 @@
+name: On Push
+run-name: ${{ github.actor }} pushed changes to Assets!
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: node ./workflow_scripts/on_push.js
+      - run: echo "Completed!"
