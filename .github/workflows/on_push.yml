@@ -5,5 +5,20 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: node ./workflow_scripts/on_push.js
-      - run: echo "Completed!"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Node setup
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - name: Install
+        run: npm install --production
+      - name: Work!
+        run: npm start
+      - name: Commit
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: Trackbot
+          message: "chore: Daily Login"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
