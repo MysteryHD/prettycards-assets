@@ -23,13 +23,21 @@ function MapHDSkins() {
 }
 
 function TransformThemeSongs() {
-	for (var filename in fs.readdirSync(INSET_THEME_SONGS_PATH)) {
+	//console.log(fs.readdirSync(INSET_THEME_SONGS_PATH));
+	fs.readdirSync(INSET_THEME_SONGS_PATH).forEach(filename => {
 		if (!filename.endsWith(".ogg")) {
-			continue;
+			console.log(`	"${filename}" is not an audio file. Skipping!`);
+			return; // The foreach version of continue
 		}
 		var myFormat = GetMyFileNameAndFolderFromMysterysFormat(filename);
-		fs.writeFileSync(`${CARDS_AUDIO_PATH}/${myFormat.folder}/intro_${myFormat.index}.ogg`, fs.readFileSync(`${INSET_THEME_SONGS_PATH}/${filename}`));
-	}
+		console.log(`	Attempting to move ${filename} as ${myFormat.folder}#${myFormat.index}`);
+		var fullFolder = `${CARDS_AUDIO_PATH}/${myFormat.folder}`;
+		if (!fs.existsSync(fullFolder)) {
+			fs.mkdirSync(fullFolder);
+		}
+		fs.writeFileSync(`${fullFolder}/intro_${myFormat.index}.ogg`, fs.readFileSync(`${INSET_THEME_SONGS_PATH}/${filename}`));
+		fs.rmSync(`${INSET_THEME_SONGS_PATH}/${filename}`);
+	});
 }
 
 function MapThemeSongs() {
@@ -63,10 +71,10 @@ function GetMyFileNameAndFolderFromMysterysFormat(/** @type {string} */ name) {
 	var number = 0;
 	var p = 1;
 	while (name2.length > 0 && !isNaN(parseInt(digit))) {
-		number += p*parseInt(digit);
+		number = number + p*parseInt(digit);
 		p *= 10;
-		name2.substring(0,name2.length-1);
-		digit = name2.charAt(name2.length-1);
+		name2 = name2.substring(0,name2.length-1);
+		digit = name2.charAt(name2.length-2);
 	}
 	if (number == 0) {
 		number = 1;
