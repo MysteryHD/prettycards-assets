@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node src/index.js",
+    "host": "bundle exec jekyll serve",
+    "build": "bundle install && bundle exec jekyll build"
+  },
+  "engines": {
+    "node": "^12.0.0"
+  },
+  "author": "elytrafae",
+  "license": "MIT",
+  "dependencies": {
+    "better-queue": "^3.8.10",
+    "needle": "^2.5.2"
+  },
+  "devDependencies": {
+    "@actions/exec": "^1.0.4",
+    "fs-extra": "^9.0.1"
+  }
+}
