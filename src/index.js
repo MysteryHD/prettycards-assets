@@ -8,11 +8,11 @@ Stuff that this should do:
 
 */
 
-const HD_SKIN_IMAGE_PATH = "../img/HDCardSkins";
-const HD_SKIN_JSON_PATH = "../json/hdCardSkins.json";
-const INSET_THEME_SONGS_PATH = "../INSERT_THEME_SONGS_HERE";
-const CARDS_AUDIO_PATH = "../audio/cards";
-const CARDS_AUDIO_JSON_PATH = "../json/baseThemeSongData.json";
+const HD_SKIN_IMAGE_PATH = "img/HDCardSkins";
+const HD_SKIN_JSON_PATH = "json/hdCardSkins.json";
+const INSET_THEME_SONGS_PATH = "INSERT_THEME_SONGS_HERE";
+const CARDS_AUDIO_PATH = "audio/cards";
+const CARDS_AUDIO_JSON_PATH = "json/baseThemeSongData.json";
 const CARDS_AUDIO_DATA_THAT_SHOULD_CARRY_OVER = ["_Disabled_Themes"];
 
 function MapHDSkins() {
