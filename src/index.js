@@ -8,6 +8,7 @@ Stuff that this should do:
 
 */
 
+// Constants
 const HD_SKIN_IMAGE_PATH = "img/HDCardSkins";
 const HD_SKIN_JSON_PATH = "json/hdCardSkins.json";
 const INSET_THEME_SONGS_PATH = "INSERT_THEME_SONGS_HERE";
