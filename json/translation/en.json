@@ -1,6 +1,6 @@
 {
     "card-65" : {
-        "ifEqual" : "{{KW:TAUNT}}. {{KW:MAGIC}}: Gain an upgraded version of the enemy SOUL. Add an {{CARD:771|1}} to your hand.",
+        "ifEqual" : "{{KW:TAUNT}}. {{KW:MAGIC}}: Gain an {{KW:UPGRADED_SOULS|override=upgraded version}} of the enemy SOUL. Add an {{CARD:771|1}} to your hand.",
         "value" : "{{KW:TAUNT}}. {{KW:MAGIC}}: Gain an {{PC_ARTIFACTS:Upgraded Version|60|56|59|58|55|57|24}} of the enemy SOUL. Add an {{CARD:771|1}} to your hand."
     },
     "pc-navigate-goback" : "Go Back!",
