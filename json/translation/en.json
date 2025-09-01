@@ -285,6 +285,7 @@
     "pc-game-leave": "Return to Play Screen",
     "pc-game-friendship-header": "FRIENDSHIP REWARDS",
     "pc-game-quest-header": "QUEST REWARDS",
+    "pc-game-rankedreward-header": "RANKED REWARDS",
     "pc-game-collect-all": "Collect All!",
     "pc-game-draw-messages": {
         "values" : [
@@ -302,6 +303,7 @@
     "pc-rewardsource-levelup": "Level Up Reward",
     "pc-rewardsource-quest": "Quest Reward",
     "pc-rewardsource-friendship": "Friendship Reward",
-    "pc-rewardsource-special": "Bonus Reward"
+    "pc-rewardsource-special": "Bonus Reward",
+    "pc-rewardsource-rankedreward": "Ranked Reward"
 }
 
